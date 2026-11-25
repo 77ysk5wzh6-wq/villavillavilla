@@ -2,786 +2,766 @@
   "title": "villa ! villa? villa",
   "author": "윤영익",
   "source": "test.pdf",
-  "pdfPages": 77,
+  "pdfPages": 75,
   "aspect": 0.7660009510894491,
   "faces": [
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/covers/front.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/covers/front.webp",
       "pdfPage": null,
       "half": "front-cover"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/covers/blank.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/covers/blank.webp",
       "pdfPage": null,
       "half": "blank"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/000.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/000.webp",
       "pdfPage": 1,
       "half": "single"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/001.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/001.webp",
       "pdfPage": 2,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/002.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/002.webp",
       "pdfPage": 2,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/003.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/003.webp",
       "pdfPage": 3,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/004.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/004.webp",
       "pdfPage": 3,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/005.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/005.webp",
       "pdfPage": 4,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/006.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/006.webp",
       "pdfPage": 4,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/007.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/007.webp",
       "pdfPage": 5,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/008.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/008.webp",
       "pdfPage": 5,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/009.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/009.webp",
       "pdfPage": 6,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/010.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/010.webp",
       "pdfPage": 6,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/011.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/011.webp",
       "pdfPage": 7,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/012.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/012.webp",
       "pdfPage": 7,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/013.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/013.webp",
       "pdfPage": 8,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/014.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/014.webp",
       "pdfPage": 8,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/015.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/015.webp",
       "pdfPage": 9,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/016.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/016.webp",
       "pdfPage": 9,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/017.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/017.webp",
       "pdfPage": 10,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/018.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/018.webp",
       "pdfPage": 10,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/019.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/019.webp",
       "pdfPage": 11,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/020.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/020.webp",
       "pdfPage": 11,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/021.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/021.webp",
       "pdfPage": 12,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/022.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/022.webp",
       "pdfPage": 12,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/023.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/023.webp",
       "pdfPage": 13,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/024.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/024.webp",
       "pdfPage": 13,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/025.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/025.webp",
       "pdfPage": 14,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/026.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/026.webp",
       "pdfPage": 14,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/027.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/027.webp",
       "pdfPage": 15,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/028.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/028.webp",
       "pdfPage": 15,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/029.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/029.webp",
       "pdfPage": 16,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/030.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/030.webp",
       "pdfPage": 16,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/031.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/031.webp",
       "pdfPage": 17,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/032.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/032.webp",
       "pdfPage": 17,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/033.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/033.webp",
       "pdfPage": 18,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/034.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/034.webp",
       "pdfPage": 18,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/035.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/035.webp",
       "pdfPage": 19,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/036.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/036.webp",
       "pdfPage": 19,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/037.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/037.webp",
       "pdfPage": 20,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/038.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/038.webp",
       "pdfPage": 20,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/039.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/039.webp",
       "pdfPage": 21,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/040.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/040.webp",
       "pdfPage": 21,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/041.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/041.webp",
       "pdfPage": 22,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/042.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/042.webp",
       "pdfPage": 22,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/043.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/043.webp",
       "pdfPage": 23,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/044.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/044.webp",
       "pdfPage": 23,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/045.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/045.webp",
       "pdfPage": 24,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/046.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/046.webp",
       "pdfPage": 24,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/047.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/047.webp",
       "pdfPage": 25,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/048.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/048.webp",
       "pdfPage": 25,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/049.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/049.webp",
       "pdfPage": 26,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/050.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/050.webp",
       "pdfPage": 26,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/051.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/051.webp",
       "pdfPage": 27,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/052.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/052.webp",
       "pdfPage": 27,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/053.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/053.webp",
       "pdfPage": 28,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/054.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/054.webp",
       "pdfPage": 28,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/055.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/055.webp",
       "pdfPage": 29,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/056.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/056.webp",
       "pdfPage": 29,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/057.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/057.webp",
       "pdfPage": 30,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/058.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/058.webp",
       "pdfPage": 30,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/059.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/059.webp",
       "pdfPage": 31,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/060.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/060.webp",
       "pdfPage": 31,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/061.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/061.webp",
       "pdfPage": 32,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/062.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/062.webp",
       "pdfPage": 32,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/063.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/063.webp",
       "pdfPage": 33,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/064.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/064.webp",
       "pdfPage": 33,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/065.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/065.webp",
       "pdfPage": 34,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/066.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/066.webp",
       "pdfPage": 34,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/067.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/067.webp",
       "pdfPage": 35,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/068.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/068.webp",
       "pdfPage": 35,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/069.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/069.webp",
       "pdfPage": 36,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/070.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/070.webp",
       "pdfPage": 36,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/071.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/071.webp",
       "pdfPage": 37,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/072.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/072.webp",
       "pdfPage": 37,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/073.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/073.webp",
       "pdfPage": 38,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/074.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/074.webp",
       "pdfPage": 38,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/075.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/075.webp",
       "pdfPage": 39,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/076.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/076.webp",
       "pdfPage": 39,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/077.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/077.webp",
       "pdfPage": 40,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/078.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/078.webp",
       "pdfPage": 40,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/079.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/079.webp",
       "pdfPage": 41,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/080.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/080.webp",
       "pdfPage": 41,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/081.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/081.webp",
       "pdfPage": 42,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/082.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/082.webp",
       "pdfPage": 42,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/083.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/083.webp",
       "pdfPage": 43,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/084.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/084.webp",
       "pdfPage": 43,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/085.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/085.webp",
       "pdfPage": 44,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/086.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/086.webp",
       "pdfPage": 44,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/087.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/087.webp",
       "pdfPage": 45,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/088.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/088.webp",
       "pdfPage": 45,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/089.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/089.webp",
       "pdfPage": 46,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/090.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/090.webp",
       "pdfPage": 46,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/091.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/091.webp",
       "pdfPage": 47,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/092.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/092.webp",
       "pdfPage": 47,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/093.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/093.webp",
       "pdfPage": 48,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/094.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/094.webp",
       "pdfPage": 48,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/095.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/095.webp",
       "pdfPage": 49,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/096.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/096.webp",
       "pdfPage": 49,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/097.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/097.webp",
       "pdfPage": 50,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/098.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/098.webp",
       "pdfPage": 50,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/099.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/099.webp",
       "pdfPage": 51,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/100.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/100.webp",
       "pdfPage": 51,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/101.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/101.webp",
       "pdfPage": 52,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/102.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/102.webp",
       "pdfPage": 52,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/103.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/103.webp",
       "pdfPage": 53,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/104.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/104.webp",
       "pdfPage": 53,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/105.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/105.webp",
       "pdfPage": 54,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/106.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/106.webp",
       "pdfPage": 54,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/107.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/107.webp",
       "pdfPage": 55,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/108.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/108.webp",
       "pdfPage": 55,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/109.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/109.webp",
       "pdfPage": 56,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/110.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/110.webp",
       "pdfPage": 56,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/111.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/111.webp",
       "pdfPage": 57,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/112.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/112.webp",
       "pdfPage": 57,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/113.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/113.webp",
       "pdfPage": 58,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/114.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/114.webp",
       "pdfPage": 58,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/115.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/115.webp",
       "pdfPage": 59,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/116.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/116.webp",
       "pdfPage": 59,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/117.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/117.webp",
       "pdfPage": 60,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/118.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/118.webp",
       "pdfPage": 60,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/119.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/119.webp",
       "pdfPage": 61,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/120.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/120.webp",
       "pdfPage": 61,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/121.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/121.webp",
       "pdfPage": 62,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/122.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/122.webp",
       "pdfPage": 62,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/123.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/123.webp",
       "pdfPage": 63,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/124.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/124.webp",
       "pdfPage": 63,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/125.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/125.webp",
       "pdfPage": 64,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/126.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/126.webp",
       "pdfPage": 64,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/127.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/127.webp",
       "pdfPage": 65,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/128.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/128.webp",
       "pdfPage": 65,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/129.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/129.webp",
       "pdfPage": 66,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/130.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/130.webp",
       "pdfPage": 66,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/131.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/131.webp",
       "pdfPage": 67,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/132.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/132.webp",
       "pdfPage": 67,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/133.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/133.webp",
       "pdfPage": 68,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/134.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/134.webp",
       "pdfPage": 68,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/135.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/135.webp",
       "pdfPage": 69,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/136.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/136.webp",
       "pdfPage": 69,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/137.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/137.webp",
       "pdfPage": 70,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/138.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/138.webp",
       "pdfPage": 70,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/139.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/139.webp",
       "pdfPage": 71,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/140.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/140.webp",
       "pdfPage": 71,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/141.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/141.webp",
       "pdfPage": 72,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/142.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/142.webp",
       "pdfPage": 72,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/143.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/143.webp",
       "pdfPage": 73,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/144.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/144.webp",
       "pdfPage": 73,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/145.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/145.webp",
       "pdfPage": 74,
       "half": "left"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/146.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/146.webp",
       "pdfPage": 74,
       "half": "right"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/147.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/pages/147.webp",
       "pdfPage": 75,
-      "half": "left"
-    },
-    {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/148.webp",
-      "pdfPage": 75,
-      "half": "right"
-    },
-    {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/149.webp",
-      "pdfPage": 76,
-      "half": "left"
-    },
-    {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/150.webp",
-      "pdfPage": 76,
-      "half": "right"
-    },
-    {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/pages/151.webp",
-      "pdfPage": 77,
       "half": "single"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/covers/blank.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/covers/blank.webp",
       "pdfPage": null,
       "half": "blank"
     },
     {
-      "src": "editions/test-e0ed2a6ef4-covers-1abf567496-0a6720b4be/covers/back.webp",
+      "src": "editions/test-b487bf8d7a-covers-1abf567496-0a6720b4be/covers/back.webp",
       "pdfPage": null,
       "half": "back-cover"
     }
