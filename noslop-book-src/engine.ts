@@ -6,6 +6,7 @@
 import type * as THREE from 'three';
 import { fitBookFrame, ZOOM_DEFAULT, ZOOM_MIN, ZOOM_MAX } from './framing';
 import { attachZoomInput } from './zoom-input';
+import { attachPageCounter } from './page-counter';
 export { visitBookVertices, bookVertex } from './book-geometry';
 
 export const DEFAULT_PROPS = /* @props */ { paper: "#ffffff", ink: "#1f2328", accent: "#626974", background: "#efefef", spread: 0, curl: 0.85, cone: 0.65, shine: 0.18, speed: 1, autoplay: false, lightIntensity: 1, shadowStrength: 0.3, diffusion: 0.82 } /* @end-props */;
@@ -17,10 +18,11 @@ export type BookManifest = { title: string; author: string; aspect: number; pdfP
 export type CoverView = 'front' | 'overview';
 export type BookPosition = { opening: number; total: number; left: number | null; right: number | null; label: string; transitioning: boolean; view: CoverView };
 
-export function init(root: HTMLElement, libs: { THREE: typeof import('three') }, initial: Props, manifest: BookManifest, onChange?: (position: BookPosition) => void, onZoomChange?: (zoom: number) => void, options: { intro?: boolean } = {}) {
+export function init(root: HTMLElement, libs: { THREE: typeof import('three') }, initial: Props, manifest: BookManifest, onChange?: (position: BookPosition) => void, onZoomChange?: (zoom: number) => void, options: { intro?: boolean; transparentBackground?: boolean } = {}) {
   const T = libs.THREE;
   const stage = root.querySelector('[data-ml-stage]') as HTMLElement;
   const counter = root.querySelector('[data-ml-counter]') as HTMLElement | null;
+  const pageCounter = counter ? attachPageCounter(counter, manifest.faces.length - 2) : null;
   const prevBtn = root.querySelector('[data-ml-prev]') as HTMLButtonElement | null;
   const nextBtn = root.querySelector('[data-ml-next]') as HTMLButtonElement | null;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -49,7 +51,8 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
   // Colours are passed through untouched: textures are raw canvas values and the shaders output them as-is.
   renderer.outputColorSpace = T.LinearSRGBColorSpace;
   const scene = new T.Scene();
-  scene.background = new T.Color(props.background);
+  const backgroundColor = new T.Color(props.background);
+  scene.background = options.transparentBackground ? null : backgroundColor;
   const backgroundFrom = new T.Color();
   const backgroundTarget = new T.Color();
   let backgroundStarted = 0;
@@ -72,7 +75,7 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
   const COVER_TURN_GAP = 500; // minimum interval after releasing an opening cover
   const ENTRY_AZIMUTH = -55 * PI / 180;
   const ENTRY_ELEVATION = 20 * PI / 180;
-  const ENTRY_DISTANCE = 1.4;
+  const ENTRY_DISTANCE = 1.3;
   const ENTRY_HOVER_TURN = 7 * PI / 180;
   const VIEW_DURATION = 2000;
   const M = 0; // covers are trimmed to the same width and height as the paper
@@ -571,13 +574,13 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
   const recolour = (backgroundTransitionMs = 0) => {
     const c = (h: string) => new T.Color().setRGB(...(hexRgb(h).map((v) => v / 255) as [number, number, number]));
     backgroundTarget.copy(c(props.background));
-    if (!reduced && backgroundTransitionMs > 0 && !scene.background.equals(backgroundTarget)) {
-      backgroundFrom.copy(scene.background);
+    if (!reduced && backgroundTransitionMs > 0 && !backgroundColor.equals(backgroundTarget)) {
+      backgroundFrom.copy(backgroundColor);
       backgroundStarted = performance.now();
       backgroundDuration = backgroundTransitionMs;
     } else {
       backgroundDuration = 0;
-      scene.background.copy(backgroundTarget);
+      backgroundColor.copy(backgroundTarget);
     }
     for (const edge of edgeMats) {
       edge.uniforms.uColor.value.copy(c(props.ink)).multiplyScalar(0.8);
@@ -614,8 +617,9 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
     const right = k < LEAVES ? k * 2 : null;
     // The white inside front cover is page 0; the first right-hand page is 1.
     const pageNumbers = k === 1 ? '1' : `${k * 2 - 2}–${k * 2 - 1}`;
-    const label = k === 0 ? (coverView === 'overview' ? '표지 둘러보기' : '표지') : k === LEAVES ? '뒤표지' : `${pageNumbers} / ${manifest.faces.length - 2}`;
-    if (counter) counter.textContent = label;
+    const label = k === 0 ? (coverView === 'overview' ? 'Angled view' : 'Front cover') : k === LEAVES ? 'Back cover' : `${pageNumbers} / ${manifest.faces.length - 2}`;
+    const cover = k === 0 || k === LEAVES;
+    pageCounter?.update({ opening: k, text: cover ? label : pageNumbers, cover, label });
     if (prevBtn) prevBtn.disabled = !!viewTransition || (k === 0 && coverView === 'overview');
     if (nextBtn) nextBtn.disabled = !!viewTransition || k === LEAVES;
     root.dataset.opening = String(k);
@@ -726,15 +730,27 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
     new T.Vector3(W + M, H / 2 + M, bindingDepth));
   const overviewRay = new T.Ray();
   const inverseBook = new T.Matrix4();
-  const overOverviewBook = (e: PointerEvent) => {
+  const overviewCorner = new T.Vector3();
+  const overviewHoverAt = (e: PointerEvent) => {
     const r = canvas.getBoundingClientRect();
+    const pointerX = ((e.clientX - r.left) / r.width) * 2 - 1;
     // Hit-test the resting view so the moving silhouette cannot oscillate
     // under a pointer resting near an edge. Test only the closed book itself.
-    ray.setFromCamera(new T.Vector2(((e.clientX - r.left) / r.width) * 2 - 1,
+    ray.setFromCamera(new T.Vector2(pointerX,
       -((e.clientY - r.top) / r.height) * 2 + 1), overviewHitCamera);
     book.updateMatrixWorld(true);
     overviewRay.copy(ray.ray).applyMatrix4(inverseBook.copy(book.matrixWorld).invert());
-    return overviewRay.intersectsBox(overviewBounds);
+    if (!overviewRay.intersectsBox(overviewBounds)) return 0;
+    // Measure screen-left/right against the same resting silhouette. Left
+    // reveals more cover; right reveals more binding, with no jump at center.
+    let left = Infinity, right = -Infinity;
+    for (const x of [overviewBounds.min.x, overviewBounds.max.x])
+      for (const y of [overviewBounds.min.y, overviewBounds.max.y])
+        for (const z of [overviewBounds.min.z, overviewBounds.max.z]) {
+          overviewCorner.set(x, y, z).applyMatrix4(book.matrixWorld).project(overviewHitCamera);
+          left = Math.min(left, overviewCorner.x); right = Math.max(right, overviewCorner.x);
+        }
+    return Math.max(-1, Math.min(1, (left + right - 2 * pointerX) / (right - left)));
   };
   // the pointer in the book's own frame
   const toBook = (e: PointerEvent) => {
@@ -803,7 +819,7 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
     if (press?.viewOnly) { press.moved ||= Math.hypot(e.clientX - press.x0, e.clientY - press.y0) > 8; return; }
     if (viewTransition) return;
     if (coverView === 'overview') {
-      overviewHoverTarget = !reduced && e.pointerType === 'mouse' && !e.buttons && overOverviewBook(e) ? 1 : 0;
+      overviewHoverTarget = !reduced && e.pointerType === 'mouse' && !e.buttons ? overviewHoverAt(e) : 0;
       dirty = true;
       return;
     }
@@ -851,7 +867,7 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
     if (pr.viewOnly) {
       if (!cancelled && !pr.moved) showCoverView('front');
       else {
-        overviewHoverTarget = !cancelled && !reduced && e.pointerType === 'mouse' && overOverviewBook(e) ? 1 : 0;
+        overviewHoverTarget = !cancelled && !reduced && e.pointerType === 'mouse' ? overviewHoverAt(e) : 0;
         canvas.style.cursor = 'pointer'; dirty = true;
       }
       return;
@@ -1015,7 +1031,7 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
       const ease = progress <= .5 ? halfEase : 1 - halfEase;
       viewAmount = viewTransition.from + (viewTransition.to - viewTransition.from) * ease;
       overviewHover = viewTransition.fromHover * (1 - ease);
-      if (progress === 1) { viewAmount = viewTransition.to; viewTransition = null; updateCounter(); }
+      if (progress === 1) { viewAmount = viewTransition.to; overviewHover = 0; viewTransition = null; updateCounter(); }
       applyCameraView();
       moving = true;
     } else if (overviewHover !== overviewHoverTarget || Math.abs(overviewHoverVelocity) > .0001) {
@@ -1043,9 +1059,9 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
       const progress = Math.max(0, Math.min(1, (now - backgroundStarted) / backgroundDuration));
       // Smoothstep matches the interface's easing and starts a reversal from
       // the colour currently on screen, without resetting the book or pages.
-      scene.background.lerpColors(backgroundFrom, backgroundTarget, progress * progress * (3 - 2 * progress));
+      backgroundColor.lerpColors(backgroundFrom, backgroundTarget, progress * progress * (3 - 2 * progress));
       if (progress === 1) {
-        scene.background.copy(backgroundTarget);
+        backgroundColor.copy(backgroundTarget);
         backgroundDuration = 0;
       }
       moving = true;
@@ -1312,6 +1328,7 @@ export function init(root: HTMLElement, libs: { THREE: typeof import('three') },
       io.disconnect();
       ro.disconnect();
       zoomInput.destroy();
+      pageCounter?.destroy();
       window.removeEventListener('resize', resize);
       document.removeEventListener('fullscreenchange', resize);
       document.removeEventListener('visibilitychange', onVis);

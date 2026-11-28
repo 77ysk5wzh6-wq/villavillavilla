@@ -3,6 +3,8 @@ import { init, DEFAULT_PROPS, type BookManifest, type BookPosition } from './eng
 import { ZOOM_DEFAULT } from './framing';
 import { attachIdleUI } from './ui-idle';
 import { preloadBookImages } from './preload';
+import { attachSoundPlayer } from './sound-player';
+import { attachThemeTransition } from './theme-transition';
 
 const root = document.getElementById('reader')!;
 const idleUI = attachIdleUI(root);
@@ -12,6 +14,10 @@ const loadingText = document.getElementById('loading-text')!;
 const fullscreen = document.getElementById('fullscreen') as HTMLButtonElement;
 const blackboard = document.getElementById('blackboard') as HTMLButtonElement;
 const notice = document.getElementById('notice')!;
+attachSoundPlayer(document.getElementById('sound-player')!,
+  new URL('noslop-book-assets/audio/villa-ambience-loop.mp3?v=trim-intro-27', location.href).href,
+  () => showNotice('소리를 불러오지 못했습니다. 재생 버튼을 다시 눌러 주세요.'),
+  () => idleUI.show());
 let zoomLevel = ZOOM_DEFAULT;
 let book: ReturnType<typeof init> | null = null;
 let generation = 0;
@@ -20,6 +26,7 @@ let firstEntry = true;
 let startup: AbortController | null = null;
 let assets: { release: () => void } | null = null;
 let blackboardEnabled = document.documentElement.dataset.theme === 'dark';
+const themeTransition = attachThemeTransition(root, document.getElementById('theme-backdrop') as HTMLCanvasElement);
 
 function zoomChanged(value: number) {
   zoomLevel = value;
@@ -27,16 +34,16 @@ function zoomChanged(value: number) {
 
 const readerProps = () => ({ ...DEFAULT_PROPS, spread: 0, background: blackboardEnabled ? '#1c1c1c' : '#efefef' });
 
-function applyBackground() {
-  document.documentElement.dataset.theme = blackboardEnabled ? 'dark' : 'light';
+function applyBackground(animate = false) {
+  themeTransition.setDark(blackboardEnabled, animate);
   blackboard.setAttribute('aria-checked', String(blackboardEnabled));
   blackboard.title = blackboardEnabled ? '다크 모드 끄기' : '다크 모드 켜기';
-  book?.update(readerProps(), 500);
+  book?.update(readerProps());
 }
 
 blackboard.addEventListener('click', () => {
   blackboardEnabled = !blackboardEnabled;
-  applyBackground();
+  applyBackground(true);
   try { localStorage.setItem('villa-book-background', blackboardEnabled ? 'black' : 'white'); } catch {}
 });
 applyBackground();
@@ -65,7 +72,7 @@ async function start() {
   assets?.release(); assets = null;
   root.classList.remove('ready');
   loading.hidden = false;
-  loadingText.textContent = '책을 준비하고 있습니다.';
+  loadingText.textContent = '0%';
   opening.disabled = true;
   notice.hidden = true;
   try {
@@ -79,13 +86,13 @@ async function start() {
       previewSrc: face.previewSrc ? new URL(face.previewSrc, url).href : undefined }));
     if (manifest.spine) manifest.spine = { ...manifest.spine, src: new URL(manifest.spine.src, url).href };
     const loaded = await preloadBookImages(manifest, controller.signal, (count, total) => {
-      if (current === generation) loadingText.textContent = `책 이미지를 불러오는 중… ${Math.round(count / total * 100)}% (${count}/${total})`;
+      if (current === generation) loadingText.textContent = `${Math.round(count / total * 100)}%`;
     });
     if (current !== generation || controller.signal.aborted) { loaded.release(); return; }
     assets = loaded;
     // Every load starts at the front cover, including old testing links such as #2.
     if (/^#\d+$/.test(location.hash)) history.replaceState(history.state, '', location.pathname + location.search);
-    book = init(root, { THREE }, readerProps(), loaded.manifest, positionChanged, zoomChanged, { intro: firstEntry });
+    book = init(root, { THREE }, readerProps(), loaded.manifest, positionChanged, zoomChanged, { intro: firstEntry, transparentBackground: true });
     book.setZoom(zoomLevel);
     await book.ready;
     if (current !== generation || controller.signal.aborted) return;

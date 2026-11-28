@@ -642,12 +642,21 @@ const active = book => book.getState().leaves.find(leaf => leaf.index === 1);
   for (const face of [19, 20, 21, 22]) assert(loadedImages().has(`${face}.webp`), 'turning and exposed resting faces must stay at full resolution');
   qualityBook.destroy();
 
+  const transparentBook = init(root, { THREE: { ...T, WebGLRenderer: Renderer } },
+    { ...DEFAULT_PROPS, spread: 0 }, manifest, undefined, undefined, { transparentBackground: true });
+  await transparentBook.ready; advance(100);
+  assert.equal(renderedScene.background, null, 'the ink backdrop must remain visible beneath the WebGL book');
+  transparentBook.update({ ...DEFAULT_PROPS, spread: 0, background: '#1c1c1c' }, 500); advance(600);
+  assert.equal(renderedScene.background, null, 'theme changes must never restore an opaque WebGL backdrop');
+  transparentBook.destroy();
+
   // Entry waits on assets and explicit input, then moves the camera for two
   // seconds. The model stays still and subsequent page turns lock the camera.
   const intro = init(root, { THREE: { ...T, WebGLRenderer: Renderer } },
     { ...DEFAULT_PROPS, spread: 0 }, { ...manifest, spine: { src: 'spine.webp', width: 159, height: 3770 } }, undefined, undefined, { intro: true });
   await intro.ready; advance(100);
   const introCanvas = stage.children.at(-1);
+  introCanvas.getBoundingClientRect = () => stage.getBoundingClientRect();
   const introGroup = renderedScene.children.find(object => object.isGroup);
   const introBinding = introGroup.children.find(mesh => mesh.userData?.bookSurface);
   assert.equal(intro.getState().view, 'overview');
@@ -711,12 +720,22 @@ const active = book => book.getState().leaves.find(leaf => leaf.index === 1);
   const introMove = (x, y = 0, pointerType = 'mouse') => introCanvas.dispatchEvent(new PointerEvent('pointermove', {
     ...point(x, y), pointerType,
   }));
+  const overviewPoint = fraction => {
+    let left = Infinity, right = -Infinity;
+    visitBookVertices(introGroup, (x, y, z) => {
+      const p = new T.Vector3(x, y, z).project(camera);
+      left = Math.min(left, p.x); right = Math.max(right, p.x);
+    });
+    return { clientX: (1 + left + (right - left) * fraction) * stage.clientWidth / 2,
+      clientY: stage.clientHeight / 2 };
+  };
+  const moveOverview = p => introCanvas.dispatchEvent(new PointerEvent('pointermove', p));
+  const leftHoverPoint = overviewPoint(.12), rightHoverPoint = overviewPoint(.88), centerHoverPoint = overviewPoint(.5);
   introMove(-1); advance(500);
   assert.equal(intro.getState().overviewHover, 0, 'blank canvas must not activate overview hover');
   introMove(0, 0, 'touch'); advance(500);
   assert.equal(intro.getState().overviewHover, 0, 'touch movement must not activate overview hover');
-  const edgeHoverPoint = point(-.48, .3);
-  introMove(0);
+  moveOverview(leftHoverPoint);
   assert.deepEqual(cameraSnapshot(camera), entryCamera, 'hover must start on animation frames without snapping');
   advance(100);
   assert(intro.getState().overviewHover > 0 && intro.getState().overviewHover < .5,
@@ -724,36 +743,49 @@ const active = book => book.getState().leaves.find(leaf => leaf.index === 1);
   let lastHover = intro.getState().overviewHover;
   for (let i = 0; i < 50; i++) {
     // Repeated input at an edge must not flicker as the camera changes angle.
-    introCanvas.dispatchEvent(new PointerEvent('pointermove', edgeHoverPoint)); advance(40);
+    moveOverview(leftHoverPoint); advance(40);
     const value = intro.getState().overviewHover;
     assert(value >= lastHover && value <= 1, 'hover must approach its angle without bounce or edge flicker');
     lastHover = value;
   }
-  assert.equal(intro.getState().overviewHover, 1);
+  assert(intro.getState().overviewHover > .6 && intro.getState().overviewHover < 1);
   assert(camera.position.x > entryCamera.position[0] && camera.position.z > entryCamera.position[2],
     'hover must reveal more of the front cover');
   assert.equal(camera.fov, entryCamera.fov, 'hover must not change the lens or create a zoom effect');
   assert.equal(camera.position.y, entryCamera.position[1]);
   assert.equal(intro.getState().opening, 0, 'hover must never open the cover');
+  const leftHoverCamera = cameraSnapshot(camera);
+  moveOverview(rightHoverPoint);
+  assert.deepEqual(cameraSnapshot(camera), leftHoverCamera, 'changing sides must not snap the camera');
+  advance(2200);
+  assert(intro.getState().overviewHover < -.6 && intro.getState().overviewHover > -1,
+    'the right side must tilt in the opposite direction');
+  assert(camera.position.x < entryCamera.position[0] && camera.position.z < entryCamera.position[2],
+    'right-side hover must reveal more of the binding');
+  assert.equal(camera.fov, entryCamera.fov);
+  assert.equal(camera.position.y, entryCamera.position[1], 'changing hover sides must preserve camera radius and elevation');
+  moveOverview(centerHoverPoint); advance(2200);
+  assert(Math.abs(intro.getState().overviewHover) < .01, 'the book center must stay near the resting angle');
+  moveOverview(leftHoverPoint); advance(2200);
   introCanvas.dispatchEvent(new PointerEvent('pointerleave'));
   advance(100);
   assert(intro.getState().overviewHover > 0 && intro.getState().overviewHover < 1,
     'leaving must ease back instead of snapping');
   advance(2200);
   assert.deepEqual(cameraSnapshot(camera), entryCamera, 'leaving must restore the exact resting camera');
-  introMove(0); advance(250);
+  moveOverview(rightHoverPoint); advance(250);
   window.dispatchEvent(new Event('blur')); advance(2200);
   assert.deepEqual(cameraSnapshot(camera), entryCamera, 'window blur must clear overview hover');
-  introCanvas.dispatchEvent(new PointerEvent('pointerdown', point(0, 0)));
-  introCanvas.dispatchEvent(new PointerEvent('pointermove', point(.15, 0)));
-  introCanvas.dispatchEvent(new PointerEvent('pointerup', point(.15, 0)));
+  introCanvas.dispatchEvent(new PointerEvent('pointerdown', leftHoverPoint));
+  moveOverview(rightHoverPoint);
+  introCanvas.dispatchEvent(new PointerEvent('pointerup', rightHoverPoint));
   advance(1400);
   assert.equal(intro.getState().view, 'overview', 'a drag in overview must not count as a click');
-  assert.equal(intro.getState().overviewHover, 1, 'releasing a mouse drag over the book must resume hover');
+  assert(intro.getState().overviewHover < -.6, 'releasing a mouse drag must resume hover at the released side');
   introCanvas.dispatchEvent(new PointerEvent('pointerleave')); advance(2200);
-  introMove(0); advance(350);
+  moveOverview(rightHoverPoint); advance(350);
   const hoveredCamera = cameraSnapshot(camera);
-  assert(intro.getState().overviewHover > 0 && intro.getState().overviewHover < 1);
+  assert(intro.getState().overviewHover < 0 && intro.getState().overviewHover > -1);
   introClick();
   assert.deepEqual(cameraSnapshot(camera), hoveredCamera, 'clicking mid-hover must keep its current camera pose');
   assert(intro.getState().transitioning && prevButton.disabled && nextButton.disabled);
@@ -828,16 +860,21 @@ const active = book => book.getState().leaves.find(leaf => leaf.index === 1);
         assert(gap >= Math.min(6, width * .012, height * .012) - .01, 'both camera paths must keep the complete book inside the viewport');
       }
       if (direction < 0) {
-        introCanvas.dispatchEvent(new PointerEvent('pointermove', { clientX: width / 2, clientY: height / 2 }));
-        for (let i = 0; i < 15; i++) {
-          advance(50);
-          visitBookVertices(introGroup, (x, y, z) => {
-            const p = new T.Vector3(x, y, z).project(camera);
-            const gap = Math.min((1 + p.x) * width / 2, (1 - p.x) * width / 2,
-              (1 + p.y) * height / 2, (1 - p.y) * height / 2);
-            assert(gap >= Math.min(6, width * .012, height * .012) - .01 && p.z > -1 && p.z < 1,
-              'overview hover must keep the entire book inside every tested viewport');
-          });
+        const hoverPoints = [overviewPoint(.12), overviewPoint(.88)];
+        for (const [side, hoverPoint] of hoverPoints.entries()) {
+          moveOverview(hoverPoint);
+          for (let i = 0; i < 15; i++) {
+            advance(50);
+            visitBookVertices(introGroup, (x, y, z) => {
+              const p = new T.Vector3(x, y, z).project(camera);
+              const gap = Math.min((1 + p.x) * width / 2, (1 - p.x) * width / 2,
+                (1 + p.y) * height / 2, (1 - p.y) * height / 2);
+              assert(gap >= Math.min(6, width * .012, height * .012) - .01 && p.z > -1 && p.z < 1,
+                'overview hover must keep the entire book inside every tested viewport');
+            });
+          }
+          assert(side === 0 ? intro.getState().overviewHover > .6 : intro.getState().overviewHover < -.6,
+            'both sides must activate directional hover at every viewport size');
         }
         introCanvas.dispatchEvent(new PointerEvent('pointerleave')); advance(2200);
       }
@@ -864,5 +901,5 @@ const active = book => book.getState().leaves.find(leaf => leaf.index === 1);
   console.log('PASS: frontal covers and spreads, fixed camera throughout page/cover motion, and no clipping at three zoom levels across eight viewport sizes.');
   console.log('PASS: visible/turning faces use full resolution, off-screen previews bound memory, and stale image requests cannot downgrade visible text.');
   console.log('PASS: damped wheel/pinch zoom, jitter filtering, input-unit normalization, smooth frames, safe limits, centering, zoom callbacks, and pinch/page-turn handoff.');
-  console.log('PASS: moderate perspective, smooth mouse-only overview hover, stable hit-testing, exit/blur recovery, mid-hover click continuity, unchanged reading camera, two-second camera arc, and viewport containment.');
+  console.log('PASS: moderate perspective, smooth directional overview hover, stable hit-testing, exit/blur recovery, mid-hover click continuity, unchanged reading camera, two-second camera arc, and viewport containment.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

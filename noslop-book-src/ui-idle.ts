@@ -1,6 +1,6 @@
 const IDLE_DELAY = 2000;
 
-// Opacity timing lives in CSS: 1.5s out, 0.2s in. Only UI is faded; the book's
+// Opacity timing lives in CSS: 1.5s to 30%, 0.2s to full. Only UI is dimmed; the book's
 // viewport and input handlers stay unchanged throughout the transition.
 export function attachIdleUI(root: HTMLElement) {
   const captured = { passive: true, capture: true };
@@ -21,7 +21,6 @@ export function attachIdleUI(root: HTMLElement) {
   window.addEventListener('pointermove', show, captured);
   window.addEventListener('pointerdown', show, captured);
   window.addEventListener('wheel', show, { passive: true });
-  window.addEventListener('keydown', show, captured);
   window.addEventListener('pageshow', show);
   window.addEventListener('pagehide', pause);
   root.addEventListener('focusin', show);
@@ -34,7 +33,6 @@ export function attachIdleUI(root: HTMLElement) {
       window.removeEventListener('pointermove', show, captured);
       window.removeEventListener('pointerdown', show, captured);
       window.removeEventListener('wheel', show);
-      window.removeEventListener('keydown', show, captured);
       window.removeEventListener('pageshow', show);
       window.removeEventListener('pagehide', pause);
       root.removeEventListener('focusin', show);

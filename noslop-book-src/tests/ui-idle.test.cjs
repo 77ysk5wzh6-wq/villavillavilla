@@ -23,7 +23,7 @@ const tick = ms => {
 const ui = attachIdleUI(root);
 assert.equal(root.dataset.uiIdle, 'false');
 tick(1999); assert.equal(root.dataset.uiIdle, 'false', 'UI must remain visible for the full two-second idle delay');
-tick(1); assert.equal(root.dataset.uiIdle, 'true', 'the fade-out state must start exactly after two seconds');
+tick(1); assert.equal(root.dataset.uiIdle, 'true', 'dimming must start exactly after two seconds');
 window.dispatchEvent(new Event('pointermove'));
 assert.equal(root.dataset.uiIdle, 'false', 'movement must restore UI immediately, including during a fade');
 tick(1500);
@@ -31,13 +31,22 @@ window.dispatchEvent(new Event('pointermove'));
 tick(1999); assert.equal(root.dataset.uiIdle, 'false', 'each movement must restart the two-second delay');
 tick(1); assert.equal(root.dataset.uiIdle, 'true');
 
-for (const event of ['pointerdown', 'wheel', 'keydown', 'pageshow']) {
+for (const event of ['pointerdown', 'wheel', 'pageshow']) {
   window.dispatchEvent(new Event(event));
   assert.equal(root.dataset.uiIdle, 'false', `${event} must reveal UI`);
   tick(2000); assert.equal(root.dataset.uiIdle, 'true');
 }
+for (const key of ['ArrowRight', 'ArrowLeft', 'Enter', ' ']) {
+  window.dispatchEvent(Object.assign(new Event('keydown'), { key }));
+  assert.equal(root.dataset.uiIdle, 'true', 'keyboard page navigation must keep an idle interface dim');
+}
+ui.show();
+tick(1500);
+window.dispatchEvent(Object.assign(new Event('keydown'), { key: 'ArrowRight' }));
+tick(500);
+assert.equal(root.dataset.uiIdle, 'true', 'a key press must not postpone the original idle deadline');
 root.dispatchEvent(new Event('focusin'));
-assert.equal(root.dataset.uiIdle, 'false', 'keyboard focus must reveal UI');
+assert.equal(root.dataset.uiIdle, 'false', 'focusing a control must still reveal UI');
 tick(1000);
 document.hidden = true;
 document.dispatchEvent(new Event('visibilitychange'));
@@ -56,4 +65,4 @@ window.dispatchEvent(new Event('keydown'));
 tick(10000); assert.equal(root.dataset.uiIdle, undefined, 'destroy must remove listeners and timers');
 assert.equal(timers.size, 0);
 
-console.log('PASS: exact two-second idle delay, immediate activity recovery, timer reset, keyboard/touch/scroll support, hidden-tab suspension, and cleanup.');
+console.log('PASS: exact two-second idle delay, keyboard reading stays dim without resetting the deadline, pointer/touch/scroll/focus recovery, hidden-tab suspension, and cleanup.');
