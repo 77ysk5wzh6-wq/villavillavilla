@@ -1,0 +1,14 @@
+{
+  "name": "villa-paper-book",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild viewer.ts --bundle --minify --format=iife --target=es2020 --outfile=../noslop-book-assets/viewer.js --legal-comments=linked",
+    "test": "npm run test:engine && npm run test:ui && npm run test:preload",
+    "test:engine": "esbuild engine.ts --bundle --platform=node --format=cjs --outfile=.test-build/engine.cjs && node tests/interaction.test.cjs",
+    "test:ui": "esbuild ui-idle.ts --bundle --platform=node --format=cjs --outfile=.test-build/ui-idle.cjs && node tests/ui-idle.test.cjs",
+    "test:preload": "esbuild preload.ts --bundle --platform=node --format=cjs --outfile=.test-build/preload.cjs && node tests/preload.test.cjs"
+  },
+  "dependencies": { "three": "0.162.0" },
+  "devDependencies": { "esbuild": "0.25.12" }
+}

@@ -51,14 +51,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/007.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-005-left.webp",
       "pdfPage": 5,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/007.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/008.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-005-right.webp",
       "pdfPage": 5,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/008.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/009.webp",
@@ -71,24 +77,36 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/011.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-007-left.webp",
       "pdfPage": 7,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/011.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/012.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-007-right.webp",
       "pdfPage": 7,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/012.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/013.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-008-left.webp",
       "pdfPage": 8,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/013.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/014.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-008-right.webp",
       "pdfPage": 8,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/014.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/015.webp",
@@ -101,14 +119,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/017.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-010-left.webp",
       "pdfPage": 10,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/017.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/018.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-010-right.webp",
       "pdfPage": 10,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/018.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/019.webp",
@@ -241,14 +265,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/045.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-024-left.webp",
       "pdfPage": 24,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/045.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/046.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-024-right.webp",
       "pdfPage": 24,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/046.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/047.webp",
@@ -381,14 +411,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/073.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-038-left.webp",
       "pdfPage": 38,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/073.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/074.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-038-right.webp",
       "pdfPage": 38,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/074.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/075.webp",
@@ -501,14 +537,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/097.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-050-left.webp",
       "pdfPage": 50,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/097.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/098.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-050-right.webp",
       "pdfPage": 50,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/098.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/099.webp",
@@ -611,14 +653,20 @@
       "half": "right"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/119.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-061-left.webp",
       "pdfPage": 61,
-      "half": "left"
+      "half": "left",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/119.webp"
     },
     {
-      "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/120.webp",
+      "src": "editions/text-2880-e88c4bf47d-v1/pdf-061-right.webp",
       "pdfPage": 61,
-      "half": "right"
+      "half": "right",
+      "width": 2880,
+      "height": 3770,
+      "previewSrc": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/120.webp"
     },
     {
       "src": "editions/final-e88c4bf47d-covers-1abf567496-0a6720b4be/pages/121.webp",
@@ -769,5 +817,34 @@
   "covers": {
     "front": "Asset 1-100.jpg",
     "back": "표지 뒷면.jpg"
+  },
+  "highResolution": {
+    "pdfPages": [
+      5,
+      7,
+      8,
+      10,
+      24,
+      38,
+      50,
+      61
+    ],
+    "faceWidth": 2880,
+    "encoding": "lossless-webp",
+    "sourceSha256": "e88c4bf47d794580b6d70f62e2c8a027bb6c7b1321f61a5c49b1434e3c540426"
+  },
+  "spine": {
+    "src": "editions/spine-4567a0e809-v1/spine.webp",
+    "width": 157,
+    "height": 3770,
+    "source": "윤영익_표지(수정).pdf",
+    "pdfPage": 1,
+    "cropPoints": [
+      550.1210815429688,
+      8.50738525390625,
+      579.4559448242187,
+      717.1644287109375
+    ],
+    "sourceSha256": "4567a0e80995d7b1c6881b51177f086929dcf3ed11d2a55cb5fe246ae856f9d1"
   }
 }

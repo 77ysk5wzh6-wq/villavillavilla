@@ -8,12 +8,12 @@
   <link rel="icon" href="data:,">
   <link rel="preload" href="noslop-book-assets/fonts/hina-mincho-title.woff2" as="font" type="font/woff2" crossorigin>
   <title>villa ! villa? villa</title>
-  <link rel="stylesheet" href="noslop-book-assets/viewer.css?v=flex-covers-gap-3">
-  <script src="noslop-book-assets/viewer.js?v=flex-covers-gap-3" defer></script>
+  <link rel="stylesheet" href="noslop-book-assets/viewer.css?v=nav-spacing-7">
+  <script src="noslop-book-assets/viewer.js?v=overview-9deg-15" defer></script>
 </head>
 <body>
   <main id="reader" aria-label="villa ! villa? villa 책 뷰어" tabindex="-1">
-    <header class="header">
+    <header class="header reader-ui">
       <h1>villa ! villa? villa</h1>
       <div class="header-actions">
         <button id="blackboard" class="header-button theme-button" type="button" role="switch" aria-checked="false" aria-label="다크 모드" title="다크 모드 켜기">
@@ -26,7 +26,7 @@
     </header>
     <div class="stage" data-ml-stage aria-busy="true"></div>
     <div id="loading" class="loading" role="status"><p id="loading-text">책을 준비하고 있습니다.</p></div>
-    <footer class="controls">
+    <footer class="controls reader-ui">
       <div class="navigation">
         <button class="arrow" type="button" data-ml-prev aria-label="이전 페이지" disabled><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
         <span data-ml-counter role="status" aria-live="polite" aria-atomic="true">표지</span>
@@ -35,7 +35,7 @@
       <label class="sr-only" for="opening">책에서 위치 이동</label>
       <input id="opening" type="range" min="0" max="76" value="0" step="1" aria-valuetext="표지" disabled>
     </footer>
-    <p id="notice" class="notice" role="status" hidden></p>
+    <p id="notice" class="notice reader-ui" role="status" hidden></p>
   </main>
 </body>
 </html>
