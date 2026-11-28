@@ -34,7 +34,9 @@ Shader-equivalent geometry measurements are retained for clipping tests.
 
 On first entry, all page, preview, and cover images finish downloading before
 the reader is revealed. Loading progress is displayed; encoded image blobs are
-kept locally while GPU decoding stays limited to nearby pages. Navigating away
+kept locally while GPU decoding stays limited to nearby pages. After textures
+are ready, the scene paints while transparent and fades from 0 to 1 opacity
+over one second with gentle acceleration and deceleration. Navigating away
 releases those blobs and cancels unfinished downloads.
 
 The first view shows the closed book from above and to its left: a -55-degree

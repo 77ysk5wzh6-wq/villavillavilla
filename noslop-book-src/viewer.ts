@@ -88,7 +88,11 @@ async function start() {
     book = init(root, { THREE }, readerProps(), loaded.manifest, positionChanged, zoomChanged, { intro: firstEntry });
     book.setZoom(zoomLevel);
     await book.ready;
-    if (current !== generation) return;
+    if (current !== generation || controller.signal.aborted) return;
+    // Paint the fully textured scene while it is still transparent, then
+    // start the fade so shader/texture setup cannot reveal it halfway through.
+    await new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
+    if (current !== generation || controller.signal.aborted) return;
     firstEntry = false;
     root.classList.add('ready');
     idleUI.show();
